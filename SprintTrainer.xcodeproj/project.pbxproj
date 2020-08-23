@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF240BCC24F1FCD300D20362 /* SprintTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF240BCA24F1FCD300D20362 /* SprintTrainer.xcdatamodeld */; };
 		BF240BD024F2118100D20362 /* RunDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF240BCF24F2118100D20362 /* RunDetailsViewController.swift */; };
+		BF240BD224F2EC2800D20362 /* StoryboardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF240BD124F2EC2800D20362 /* StoryboardSupport.swift */; };
 		BF84973E24F1A9EF003A69A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84973D24F1A9EF003A69A1 /* AppDelegate.swift */; };
 		BF84974024F1A9EF003A69A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84973F24F1A9EF003A69A1 /* SceneDelegate.swift */; };
 		BF84974524F1A9EF003A69A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF84974324F1A9EF003A69A1 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		BF240BCB24F1FCD300D20362 /* SprintTrainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SprintTrainer.xcdatamodel; sourceTree = "<group>"; };
 		BF240BCF24F2118100D20362 /* RunDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailsViewController.swift; sourceTree = "<group>"; };
+		BF240BD124F2EC2800D20362 /* StoryboardSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSupport.swift; sourceTree = "<group>"; };
 		BF84973A24F1A9EF003A69A1 /* SprintTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprintTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF84973D24F1A9EF003A69A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF84973F24F1A9EF003A69A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF240BD324F2ED9100D20362 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				BF240BD124F2EC2800D20362 /* StoryboardSupport.swift */,
+				BF84974324F1A9EF003A69A1 /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		BF84973124F1A9EF003A69A1 = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +80,7 @@
 				BF84973D24F1A9EF003A69A1 /* AppDelegate.swift */,
 				BF84973F24F1A9EF003A69A1 /* SceneDelegate.swift */,
 				BF84975724F1AE66003A69A1 /* ViewControllers */,
-				BF84974324F1A9EF003A69A1 /* Main.storyboard */,
+				BF240BD324F2ED9100D20362 /* StoryBoard */,
 				BF84974624F1A9F3003A69A1 /* Assets.xcassets */,
 				BF84974824F1A9F3003A69A1 /* LaunchScreen.storyboard */,
 				BF84974B24F1A9F3003A69A1 /* Info.plist */,
@@ -177,6 +188,7 @@
 				BF84975624F1AE55003A69A1 /* ActivityFeedViewController.swift in Sources */,
 				BF84974024F1A9EF003A69A1 /* SceneDelegate.swift in Sources */,
 				BF240BCC24F1FCD300D20362 /* SprintTrainer.xcdatamodeld in Sources */,
+				BF240BD224F2EC2800D20362 /* StoryboardSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

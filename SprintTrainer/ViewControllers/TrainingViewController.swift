@@ -49,6 +49,34 @@ class TrainingViewController: UIViewController {
     
     @IBAction func stopTapped(_ sender: Any) {
         stopRun()
+        
+        let alertController = UIAlertController(title: "Finish Run?", message: "", preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alertController.addAction(UIAlertAction(title: "Save", style: .default, handler: { (UIAlertAction) in
+            self.stopRun()
+            self.performSegue(withIdentifier: .details, sender: nil)
+        }))
+        alertController.addAction(UIAlertAction(title: "Discard", style: .destructive, handler: { (UIAlertAction) in
+            self.stopRun()
+            _ = self.navigationController?.popViewController(animated: true)
+        }))
+        
+        present(alertController, animated: true)
+        
     }
     
+}
+
+extension TrainingViewController : SegueHandlerType {
+    enum SegueIdentifier: String {
+        case details = "RunDetailsViewController"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segueIdentifier(for: segue) {
+        case .details:
+            let destination = segue.destination as! RunDetailsViewController
+            destination.run = run
+        }
+    }
 }
