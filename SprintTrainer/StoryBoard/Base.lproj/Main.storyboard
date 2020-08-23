@@ -131,9 +131,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="IHn-DH-S6p"/>
                     <connections>
+                        <outlet property="distanceLabel" destination="MKz-S2-DjX" id="QfJ-d9-lZp"/>
                         <outlet property="infoStackView" destination="GXL-AZ-PIG" id="qmI-vN-mGu"/>
+                        <outlet property="paceLabel" destination="Ulw-El-dti" id="lab-4x-bD8"/>
                         <outlet property="startButton" destination="aJS-Ad-bST" id="B3F-lh-yb2"/>
                         <outlet property="stopButton" destination="utq-ig-TfG" id="Ec9-uO-Ffc"/>
+                        <outlet property="timeLabel" destination="0rc-8x-QeG" id="73o-KZ-NB9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucY-HZ-a3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
