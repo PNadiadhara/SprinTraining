@@ -7,24 +7,43 @@
 //
 
 import UIKit
+import MapKit
 
 class TrainingViewController: UIViewController {
-
+    
+    //hidding an element on the stack I.E. a button will cause it to use all the room in the stack on the story board
+    @IBOutlet weak var infoStackView: UIStackView!
+    
+    @IBOutlet weak var startButton: UIButton!
+    
+    @IBOutlet weak var stopButton: UIButton!
+    
+    private var run: Run?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.green
-        // Do any additional setup after loading the view.
+        
+//        view.backgroundColor = UIColor.green
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func startRun(){
+        infoStackView.isHidden = false
+        startButton.isHidden = true
     }
-    */
 
+    private func stopRun(){
+        infoStackView.isHidden = true
+        stopButton.isHidden = true
+    }
+  
+    @IBAction func startTapped(_ sender: Any) {
+        startRun()
+        print("Start Pressed")
+    }
+    
+    @IBAction func stopTapped(_ sender: Any) {
+        stopRun()
+    }
+    
 }
