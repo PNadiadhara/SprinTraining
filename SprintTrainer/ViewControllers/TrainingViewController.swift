@@ -18,10 +18,13 @@ class TrainingViewController: UIViewController {
     
     @IBOutlet weak var stopButton: UIButton!
     
+   
+    
     private var run: Run?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
 //        view.backgroundColor = UIColor.green
         
@@ -30,11 +33,13 @@ class TrainingViewController: UIViewController {
     private func startRun(){
         infoStackView.isHidden = false
         startButton.isHidden = true
+        stopButton.isHidden = false
     }
 
     private func stopRun(){
         infoStackView.isHidden = true
         stopButton.isHidden = true
+        startButton.isHidden = false
     }
   
     @IBAction func startTapped(_ sender: Any) {

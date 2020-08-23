@@ -71,14 +71,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CCZ-nc-WZh">
-                                <rect key="frame" x="20" y="96" width="374" height="374"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="CCZ-nc-WZh" secondAttribute="height" multiplier="1:1" id="6ft-DP-vOs"/>
-                                </constraints>
-                            </mapView>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="GXL-AZ-PIG" userLabel="Info Stack View">
-                                <rect key="frame" x="20" y="478" width="374" height="217.5"/>
+                                <rect key="frame" x="20" y="108" width="374" height="217.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKz-S2-DjX">
                                         <rect key="frame" x="153.5" y="0.0" width="67" height="20.5"/>
@@ -101,10 +95,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PEm-f0-EQJ" userLabel="Button Stack View">
-                                <rect key="frame" x="20" y="703.5" width="374" height="101.5"/>
+                                <rect key="frame" x="20" y="345.5" width="374" height="457.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJS-Ad-bST">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="101.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="457.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="START"/>
                                         <connections>
@@ -124,17 +118,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="CCZ-nc-WZh" firstAttribute="top" secondItem="tUK-zb-3wd" secondAttribute="top" constant="8" id="3HO-fO-k2y"/>
-                            <constraint firstItem="tUK-zb-3wd" firstAttribute="trailing" secondItem="PEm-f0-EQJ" secondAttribute="trailing" constant="20" id="7NQ-Ym-P5F"/>
-                            <constraint firstItem="GXL-AZ-PIG" firstAttribute="top" secondItem="CCZ-nc-WZh" secondAttribute="bottom" constant="8" id="8gh-Pa-Yuf"/>
-                            <constraint firstItem="GXL-AZ-PIG" firstAttribute="leading" secondItem="tUK-zb-3wd" secondAttribute="leading" constant="20" id="CIE-Do-7vb"/>
-                            <constraint firstItem="tUK-zb-3wd" firstAttribute="bottom" secondItem="PEm-f0-EQJ" secondAttribute="bottom" constant="8" id="FCT-kG-vvj"/>
-                            <constraint firstItem="tUK-zb-3wd" firstAttribute="bottom" secondItem="PEm-f0-EQJ" secondAttribute="bottom" constant="8" id="GSI-1y-7ak"/>
-                            <constraint firstItem="tUK-zb-3wd" firstAttribute="trailing" secondItem="CCZ-nc-WZh" secondAttribute="trailing" constant="20" id="Iwx-TU-bVJ"/>
-                            <constraint firstItem="PEm-f0-EQJ" firstAttribute="top" secondItem="GXL-AZ-PIG" secondAttribute="bottom" constant="8" id="g0Q-pr-u6a"/>
-                            <constraint firstItem="PEm-f0-EQJ" firstAttribute="leading" secondItem="tUK-zb-3wd" secondAttribute="leading" constant="20" id="gvk-Oj-kSe"/>
-                            <constraint firstItem="CCZ-nc-WZh" firstAttribute="leading" secondItem="tUK-zb-3wd" secondAttribute="leading" constant="20" id="j2X-zo-DNz"/>
-                            <constraint firstItem="tUK-zb-3wd" firstAttribute="trailing" secondItem="GXL-AZ-PIG" secondAttribute="trailing" constant="20" id="nB0-FU-9DB"/>
+                            <constraint firstItem="tUK-zb-3wd" firstAttribute="bottom" secondItem="PEm-f0-EQJ" secondAttribute="bottom" constant="10" id="3Nu-gU-b5z"/>
+                            <constraint firstItem="GXL-AZ-PIG" firstAttribute="top" secondItem="tUK-zb-3wd" secondAttribute="top" constant="20" id="CJs-6z-793"/>
+                            <constraint firstItem="tUK-zb-3wd" firstAttribute="trailing" secondItem="PEm-f0-EQJ" secondAttribute="trailing" constant="20" id="Uze-I5-9m3"/>
+                            <constraint firstItem="PEm-f0-EQJ" firstAttribute="top" secondItem="GXL-AZ-PIG" secondAttribute="bottom" constant="20" id="W48-tM-1BE"/>
+                            <constraint firstItem="GXL-AZ-PIG" firstAttribute="leading" secondItem="tUK-zb-3wd" secondAttribute="leading" constant="20" id="n2l-8z-W6O"/>
+                            <constraint firstItem="PEm-f0-EQJ" firstAttribute="leading" secondItem="tUK-zb-3wd" secondAttribute="leading" constant="20" id="sxl-LC-Ndf"/>
+                            <constraint firstItem="tUK-zb-3wd" firstAttribute="trailing" secondItem="GXL-AZ-PIG" secondAttribute="trailing" constant="20" id="w7b-Kj-ZbV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tUK-zb-3wd"/>
                     </view>
