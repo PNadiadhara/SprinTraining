@@ -7,22 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF240BCC24F1FCD300D20362 /* SprintTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF240BCA24F1FCD300D20362 /* SprintTrainer.xcdatamodeld */; };
+		BF240BD024F2118100D20362 /* RunDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF240BCF24F2118100D20362 /* RunDetailsViewController.swift */; };
 		BF84973E24F1A9EF003A69A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84973D24F1A9EF003A69A1 /* AppDelegate.swift */; };
 		BF84974024F1A9EF003A69A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84973F24F1A9EF003A69A1 /* SceneDelegate.swift */; };
-		BF84974224F1A9EF003A69A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84974124F1A9EF003A69A1 /* ViewController.swift */; };
 		BF84974524F1A9EF003A69A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF84974324F1A9EF003A69A1 /* Main.storyboard */; };
 		BF84974724F1A9F3003A69A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF84974624F1A9F3003A69A1 /* Assets.xcassets */; };
 		BF84974A24F1A9F3003A69A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF84974824F1A9F3003A69A1 /* LaunchScreen.storyboard */; };
 		BF84975224F1AE15003A69A1 /* PersonalStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84975124F1AE15003A69A1 /* PersonalStatsViewController.swift */; };
 		BF84975424F1AE3D003A69A1 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84975324F1AE3D003A69A1 /* TrainingViewController.swift */; };
 		BF84975624F1AE55003A69A1 /* ActivityFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84975524F1AE55003A69A1 /* ActivityFeedViewController.swift */; };
+		BF84975924F1F28F003A69A1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84975824F1F28F003A69A1 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF240BCB24F1FCD300D20362 /* SprintTrainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SprintTrainer.xcdatamodel; sourceTree = "<group>"; };
+		BF240BCF24F2118100D20362 /* RunDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailsViewController.swift; sourceTree = "<group>"; };
 		BF84973A24F1A9EF003A69A1 /* SprintTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprintTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF84973D24F1A9EF003A69A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF84973F24F1A9EF003A69A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF84974124F1A9EF003A69A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF84974424F1A9EF003A69A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF84974624F1A9F3003A69A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF84974924F1A9F3003A69A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		BF84975124F1AE15003A69A1 /* PersonalStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalStatsViewController.swift; sourceTree = "<group>"; };
 		BF84975324F1AE3D003A69A1 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		BF84975524F1AE55003A69A1 /* ActivityFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFeedViewController.swift; sourceTree = "<group>"; };
+		BF84975824F1F28F003A69A1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				BF84974624F1A9F3003A69A1 /* Assets.xcassets */,
 				BF84974824F1A9F3003A69A1 /* LaunchScreen.storyboard */,
 				BF84974B24F1A9F3003A69A1 /* Info.plist */,
+				BF84975A24F1F298003A69A1 /* CoreData */,
 			);
 			path = SprintTrainer;
 			sourceTree = "<group>";
@@ -76,12 +81,21 @@
 		BF84975724F1AE66003A69A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF84974124F1A9EF003A69A1 /* ViewController.swift */,
 				BF84975124F1AE15003A69A1 /* PersonalStatsViewController.swift */,
 				BF84975324F1AE3D003A69A1 /* TrainingViewController.swift */,
 				BF84975524F1AE55003A69A1 /* ActivityFeedViewController.swift */,
+				BF240BCF24F2118100D20362 /* RunDetailsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BF84975A24F1F298003A69A1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BF84975824F1F28F003A69A1 /* CoreDataStack.swift */,
+				BF240BCA24F1FCD300D20362 /* SprintTrainer.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,12 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF84975924F1F28F003A69A1 /* CoreDataStack.swift in Sources */,
 				BF84975424F1AE3D003A69A1 /* TrainingViewController.swift in Sources */,
-				BF84974224F1A9EF003A69A1 /* ViewController.swift in Sources */,
 				BF84973E24F1A9EF003A69A1 /* AppDelegate.swift in Sources */,
+				BF240BD024F2118100D20362 /* RunDetailsViewController.swift in Sources */,
 				BF84975224F1AE15003A69A1 /* PersonalStatsViewController.swift in Sources */,
 				BF84975624F1AE55003A69A1 /* ActivityFeedViewController.swift in Sources */,
 				BF84974024F1A9EF003A69A1 /* SceneDelegate.swift in Sources */,
+				BF240BCC24F1FCD300D20362 /* SprintTrainer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +374,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF240BCA24F1FCD300D20362 /* SprintTrainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF240BCB24F1FCD300D20362 /* SprintTrainer.xcdatamodel */,
+			);
+			currentVersion = BF240BCB24F1FCD300D20362 /* SprintTrainer.xcdatamodel */;
+			path = SprintTrainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF84973224F1A9EF003A69A1 /* Project object */;
 }

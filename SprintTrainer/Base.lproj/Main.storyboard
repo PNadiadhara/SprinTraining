@@ -49,6 +49,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="tZk-um-8rG"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tKd-jQ-ghB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -77,6 +78,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucY-HZ-a3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1987" y="129"/>
+        </scene>
+        <!--Run Details View Controller-->
+        <scene sceneID="5QN-0d-5GK">
+            <objects>
+                <viewController id="QEz-Od-MYl" customClass="RunDetailsViewController" customModule="SprintTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0e8-Uc-Yqh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JLK-8U-Mxl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WzX-XE-p6f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2785" y="125"/>
         </scene>
         <!--Item-->
         <scene sceneID="GgC-w7-Cfh">
