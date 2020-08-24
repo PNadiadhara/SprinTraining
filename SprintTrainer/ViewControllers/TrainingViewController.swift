@@ -8,11 +8,15 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class TrainingViewController: UIViewController {
     
     //hidding an element on the stack I.E. a button will cause it to use all the room in the stack on the story board
     @IBOutlet weak var infoStackView: UIStackView!
+    @IBOutlet weak var logoStackView: UIStackView!
+    @IBOutlet weak var mapUIView: UIView!
+    @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var startButton: UIButton!
     
@@ -39,7 +43,7 @@ class TrainingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
+        mapView.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -50,8 +54,11 @@ class TrainingViewController: UIViewController {
     
     private func startRun(){
         infoStackView.isHidden = false
+        logoStackView.isHidden = true
         startButton.isHidden = true
         stopButton.isHidden = false
+        mapUIView.isHidden = false
+        mapView.removeOverlays(mapView.overlays)
         
         seconds = 0
         distance = Measurement(value: 0, unit: UnitLength.meters)
@@ -62,6 +69,16 @@ class TrainingViewController: UIViewController {
         }
         startLocationUpdates()
     }
+    
+    private func stopRun(){
+           infoStackView.isHidden = true
+           stopButton.isHidden = true
+           startButton.isHidden = false
+           logoStackView.isHidden = false
+           mapUIView.isHidden = true
+           
+           locationManager.stopUpdatingLocation()
+       }
     
     
     private func saveRun() {
@@ -83,13 +100,7 @@ class TrainingViewController: UIViewController {
         run = newRun
     }
 
-    private func stopRun(){
-        infoStackView.isHidden = true
-        stopButton.isHidden = true
-        startButton.isHidden = false
-        
-        locationManager.stopUpdatingLocation()
-    }
+   
    
     func updateDisplay(){
         let formattedDistance = FormatDisplay.distance(distance)
@@ -167,9 +178,28 @@ extension TrainingViewController : CLLocationManagerDelegate {
             if let lastLocation = locationList.last {
                 let delta = newLocation.distance(from: lastLocation)
                 distance = distance + Measurement(value: delta, unit: UnitLength.meters)
+                
+                let coordinates = [lastLocation.coordinate, newLocation.coordinate]
+                mapView.addOverlay(MKPolyline(coordinates: coordinates, count: 2))
+                let region = MKCoordinateRegion(center: newLocation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+                mapView.setRegion(region, animated: true)
+
             }
             
             locationList.append(newLocation)
         }
     }
 }
+
+extension TrainingViewController: MKMapViewDelegate {
+  func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+    guard let polyline = overlay as? MKPolyline else {
+      return MKOverlayRenderer(overlay: overlay)
+    }
+    let renderer = MKPolylineRenderer(polyline: polyline)
+    renderer.strokeColor = .blue
+    renderer.lineWidth = 3
+    return renderer
+  }
+}
+
