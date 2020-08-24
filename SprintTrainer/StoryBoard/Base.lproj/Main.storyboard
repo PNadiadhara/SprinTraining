@@ -152,7 +152,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g6t-9L-LRM">
-                                <rect key="frame" x="87" y="160" width="240" height="128"/>
+                                <rect key="frame" x="20" y="88" width="374" height="298"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="N87-ak-dy3" userLabel="Info Stack View">
@@ -189,10 +189,17 @@
                         <viewLayoutGuide key="safeArea" id="JLK-8U-Mxl"/>
                     </view>
                     <navigationItem key="navigationItem" id="KNi-NL-uLU"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="GHk-Yh-KKt" id="7nF-FG-iHn"/>
+                        <outlet property="distanceLabel" destination="ghB-WN-2CL" id="ZcJ-kV-BlG"/>
+                        <outlet property="mapView" destination="g6t-9L-LRM" id="Ty4-Al-6LS"/>
+                        <outlet property="paceLabel" destination="QyX-eu-38l" id="WNq-1q-PlW"/>
+                        <outlet property="timeLabel" destination="jGv-cZ-brv" id="1qF-79-gnu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WzX-XE-p6f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2799" y="98"/>
+            <point key="canvasLocation" x="2798.5507246376815" y="97.767857142857139"/>
         </scene>
         <!--Item-->
         <scene sceneID="GgC-w7-Cfh">
