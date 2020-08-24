@@ -39,7 +39,7 @@ class TrainingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+      
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -114,23 +114,22 @@ class TrainingViewController: UIViewController {
         
     }
     
-    @IBAction func stopTapped(_ sender: Any) {
-        stopRun()
-        
-        let alertController = UIAlertController(title: "Finish Run?", message: "", preferredStyle: .actionSheet)
+    @IBAction func stopTapped() {
+       let alertController = UIAlertController(title: "End run?",
+                                                message: "Do you wish to end your run?",
+                                                preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        alertController.addAction(UIAlertAction(title: "Save", style: .default, handler: { (UIAlertAction) in
-            self.stopRun()
-            self.saveRun()
-            self.performSegue(withIdentifier: .details, sender: nil)
-        }))
-        alertController.addAction(UIAlertAction(title: "Discard", style: .destructive, handler: { (UIAlertAction) in
-            self.stopRun()
-            _ = self.navigationController?.popViewController(animated: true)
-        }))
+        alertController.addAction(UIAlertAction(title: "Save", style: .default) { _ in
+          self.stopRun()
+          self.saveRun()
+          self.performSegue(withIdentifier: .details, sender: nil)
+        })
+        alertController.addAction(UIAlertAction(title: "Discard", style: .destructive) { _ in
+          self.stopRun()
+          _ = self.navigationController?.popToRootViewController(animated: true)
+        })
         
         present(alertController, animated: true)
-        
     }
     
     private func startLocationUpdates(){

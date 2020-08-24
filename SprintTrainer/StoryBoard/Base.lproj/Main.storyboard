@@ -110,8 +110,7 @@
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="STOP"/>
                                         <connections>
-                                            <action selector="stopTapped:" destination="Ao7-aw-H9q" eventType="touchUpInside" id="IdY-xM-ga6"/>
-                                            <segue destination="QEz-Od-MYl" kind="show" identifier="RunDetailsViewController" id="agE-bV-ETl"/>
+                                            <action selector="stopTapped" destination="Ao7-aw-H9q" eventType="touchUpInside" id="N1z-Bi-kek"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -137,11 +136,12 @@
                         <outlet property="startButton" destination="aJS-Ad-bST" id="B3F-lh-yb2"/>
                         <outlet property="stopButton" destination="utq-ig-TfG" id="Ec9-uO-Ffc"/>
                         <outlet property="timeLabel" destination="0rc-8x-QeG" id="73o-KZ-NB9"/>
+                        <segue destination="QEz-Od-MYl" kind="show" identifier="RunDetailsViewController" id="jfe-Gm-I3F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucY-HZ-a3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="98"/>
+            <point key="canvasLocation" x="1916" y="98"/>
         </scene>
         <!--Run Details View Controller-->
         <scene sceneID="5QN-0d-5GK">

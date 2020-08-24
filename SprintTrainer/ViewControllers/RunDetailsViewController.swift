@@ -25,6 +25,7 @@ class RunDetailsViewController: UIViewController {
         super.viewDidLoad()
         configureView()
         
+        
     }
     
     private func configureView(){
