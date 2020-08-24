@@ -14,6 +14,7 @@
 		BF5516AF24F2FD9100CBD452 /* DisplayFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5516AE24F2FD9100CBD452 /* DisplayFormat.swift */; };
 		BF5516B124F305B300CBD452 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5516B024F305B300CBD452 /* LocationManager.swift */; };
 		BF5516B424F3066200CBD452 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5516B324F3066200CBD452 /* MapKit.framework */; };
+		BF5516B624F3FBA800CBD452 /* PolylineColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5516B524F3FBA800CBD452 /* PolylineColor.swift */; };
 		BF84973E24F1A9EF003A69A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84973D24F1A9EF003A69A1 /* AppDelegate.swift */; };
 		BF84974024F1A9EF003A69A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84973F24F1A9EF003A69A1 /* SceneDelegate.swift */; };
 		BF84974524F1A9EF003A69A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF84974324F1A9EF003A69A1 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		BF5516AE24F2FD9100CBD452 /* DisplayFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFormat.swift; sourceTree = "<group>"; };
 		BF5516B024F305B300CBD452 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		BF5516B324F3066200CBD452 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BF5516B524F3FBA800CBD452 /* PolylineColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineColor.swift; sourceTree = "<group>"; };
 		BF84973A24F1A9EF003A69A1 /* SprintTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprintTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF84973D24F1A9EF003A69A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF84973F24F1A9EF003A69A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				BF5516AB24F2F6A200CBD452 /* PaceUnitConverter.swift */,
 				BF5516B024F305B300CBD452 /* LocationManager.swift */,
 				BF5516AE24F2FD9100CBD452 /* DisplayFormat.swift */,
+				BF5516B524F3FBA800CBD452 /* PolylineColor.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5516B624F3FBA800CBD452 /* PolylineColor.swift in Sources */,
 				BF5516AF24F2FD9100CBD452 /* DisplayFormat.swift in Sources */,
 				BF84975924F1F28F003A69A1 /* CoreDataStack.swift in Sources */,
 				BF5516AC24F2F6A200CBD452 /* PaceUnitConverter.swift in Sources */,

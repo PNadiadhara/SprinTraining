@@ -151,33 +151,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g6t-9L-LRM">
-                                <rect key="frame" x="20" y="88" width="374" height="298"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g6t-9L-LRM">
+                                <rect key="frame" x="20" y="96" width="374" height="322"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g6t-9L-LRM" secondAttribute="height" multiplier="187:161" id="GsB-tw-qgS"/>
+                                    <constraint firstAttribute="width" secondItem="g6t-9L-LRM" secondAttribute="height" multiplier="187:161" id="VSk-Lf-Pep"/>
+                                </constraints>
                             </mapView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="N87-ak-dy3" userLabel="Info Stack View">
-                                <rect key="frame" x="152" y="498" width="67" height="82"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N87-ak-dy3" userLabel="Info Stack View">
+                                <rect key="frame" x="20" y="426" width="374" height="428"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHk-Yh-KKt">
-                                        <rect key="frame" x="0.0" y="0.0" width="67" height="20.5"/>
+                                        <rect key="frame" x="169" y="0.0" width="36" height="107"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghB-WN-2CL">
-                                        <rect key="frame" x="0.0" y="20.5" width="67" height="20.5"/>
+                                        <rect key="frame" x="153.5" y="107" width="67" height="107"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGv-cZ-brv">
-                                        <rect key="frame" x="0.0" y="41" width="67" height="20.5"/>
+                                        <rect key="frame" x="168" y="214" width="38" height="107"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pace" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyX-eu-38l">
-                                        <rect key="frame" x="0.0" y="61.5" width="67" height="20.5"/>
+                                        <rect key="frame" x="168" y="321" width="38" height="107"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -186,6 +189,15 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JLK-8U-Mxl" firstAttribute="trailing" secondItem="g6t-9L-LRM" secondAttribute="trailing" constant="20" id="0xj-SV-dUF"/>
+                            <constraint firstItem="N87-ak-dy3" firstAttribute="leading" secondItem="JLK-8U-Mxl" secondAttribute="leading" constant="20" id="3gd-et-vfl"/>
+                            <constraint firstItem="JLK-8U-Mxl" firstAttribute="trailing" secondItem="N87-ak-dy3" secondAttribute="trailing" constant="20" id="Xan-eq-PD4"/>
+                            <constraint firstItem="JLK-8U-Mxl" firstAttribute="bottom" secondItem="N87-ak-dy3" secondAttribute="bottom" constant="8" id="b5t-AO-fFy"/>
+                            <constraint firstItem="g6t-9L-LRM" firstAttribute="leading" secondItem="JLK-8U-Mxl" secondAttribute="leading" constant="20" id="chI-Sv-97O"/>
+                            <constraint firstItem="g6t-9L-LRM" firstAttribute="top" secondItem="JLK-8U-Mxl" secondAttribute="top" constant="8" id="jMd-yx-Bic"/>
+                            <constraint firstItem="N87-ak-dy3" firstAttribute="top" secondItem="g6t-9L-LRM" secondAttribute="bottom" constant="8" id="x8l-QY-UEF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JLK-8U-Mxl"/>
                     </view>
                     <navigationItem key="navigationItem" id="KNi-NL-uLU"/>
