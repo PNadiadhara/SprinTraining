@@ -10,9 +10,10 @@ import UIKit
 
 class ActivityFeedViewController: UIViewController {
 
+    let customCoolers = CustomCoolors()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.yellow
+        view.backgroundColor = customCoolers.redSalsa
         
     }
     

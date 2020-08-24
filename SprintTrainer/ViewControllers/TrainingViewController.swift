@@ -26,6 +26,8 @@ class TrainingViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var paceLabel: UILabel!
     
+    let customCoolers = CustomCoolors()
+    
     
     private var run: Run?
     
@@ -44,22 +46,36 @@ class TrainingViewController: UIViewController {
         super.viewDidLoad()
         
         mapView.delegate = self
+        view.backgroundColor = customCoolers.celadonBlue
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        startButtonSettings()
+        navigationController?.hidesBarsOnTap = true
+    }
+    
+   
+    private func startButtonSettings() {
+        startButton.layer.cornerRadius = startButton.frame.height * 0.20
+        startButton.backgroundColor = customCoolers.yaleBlue
+        startButton.setTitleColor(.white, for: .normal)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         timer?.invalidate()
         locationManager.stopUpdatingLocation()
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     private func startRun(){
         infoStackView.isHidden = false
+        infoStackView.backgroundColor = customCoolers.yaleBlue
         logoStackView.isHidden = true
         startButton.isHidden = true
         stopButton.isHidden = false
         mapUIView.isHidden = false
         mapView.removeOverlays(mapView.overlays)
-        
+        stopButton.layer.cornerRadius = stopButton.frame.height * 0.20
         seconds = 0
         distance = Measurement(value: 0, unit: UnitLength.meters)
         locationList.removeAll()
